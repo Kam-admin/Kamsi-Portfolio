@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kamsiriochi David Emmanuel - Junior QA Engineer specializing in manual testing, security awareness, and no-code automation. Available for QA, testing, and technical roles in Coventry, UK.">
+    <meta name="keywords" content="QA Engineer, Software Tester, Manual Testing, Web Application Testing, No-Code Developer, Coventry, UK">
+    <meta name="author" content="Kamsiriochi David Emmanuel">
+    <title>Kamsiriochi David Emmanuel - Junior QA Engineer | Software Tester | Coventry, UK</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0a0e27;
+            --bg-darker: #050814;
+            --bg-card: rgba(15, 23, 42, 0.6);
+            --accent-primary: #6366f1;
+            --accent-secondary: #8b5cf6;
+            --accent-tertiary: #ec4899;
+            --accent-success: #10b981;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-dim: #94a3b8;
+            --border-subtle: rgba(148, 163, 184, 0.15);
+            --glow-primary: rgba(99, 102, 241, 0.4);
+            --glow-secondary: rgba(139, 92, 246, 0.3);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-darker);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.15), transparent),
+                radial-gradient(ellipse 60% 50% at 80% 50%, rgba(139, 92, 246, 0.1), transparent),
+                radial-gradient(ellipse 60% 60% at 20% 80%, rgba(236, 72, 153, 0.1), transparent);
+            z-index: -1;
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 14, 39, 0.8);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 100;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 60px;
+            padding: 6rem 2rem;
+            background: 
+                radial-gradient(ellipse 100% 60% at 50% 0%, rgba(99, 102, 241, 0.15), transparent 80%),
+                linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(99, 102, 241, 0.03) 2px,
+                    rgba(99, 102, 241, 0.03) 4px
+                );
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 2.2fr) minmax(280px, 1fr);
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-left h1 {
+            font-size: 3.2rem;
+            margin: 1rem 0 0.75rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-left .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 38rem;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .avatar-ring {
+            width: 100px;
+            height: 100px;
+            border-radius: 999px;
+            padding: 4px;
+            background: conic-gradient(from 180deg, 
+                var(--accent-success), 
+                var(--accent-primary), 
+                var(--accent-secondary), 
+                var(--accent-tertiary),
+                var(--accent-success));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: rotate 8s linear infinite;
+            box-shadow: 0 0 40px var(--glow-primary);
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .avatar-initials {
+            width: 100%;
+            height: 100%;
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(10, 14, 39, 0.95), rgba(15, 23, 42, 0.95));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .hero-badges {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+
+        .badge-primary {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.3));
+            border: 1px solid rgba(99, 102, 241, 0.5);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+        }
+
+        .badge-outline {
+            border: 1px solid var(--border-subtle);
+            background: rgba(15, 23, 42, 0.4);
+            color: var(--text-secondary);
+        }
+
+        .hero-meta {
+            margin: 2rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .meta-item {
+            padding: 1rem 1.25rem;
+            border-radius: 1rem;
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-subtle);
+            transition: all 0.3s ease;
+        }
+
+        .meta-item:hover {
+            background: rgba(15, 23, 42, 0.6);
+            border-color: rgba(99, 102, 241, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .meta-label {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+
+        .meta-value {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .hero-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            padding: 0.9rem 1.8rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            box-shadow: 0 4px 20px var(--glow-primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px var(--glow-primary);
+        }
+
+        .btn-secondary {
+            background: rgba(15, 23, 42, 0.6);
+            color: var(--text-primary);
+            border: 1px solid var(--border-subtle);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(15, 23, 42, 0.8);
+            border-color: rgba(99, 102, 241, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .contact-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+        }
+
+        .contact-inline a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-inline a:hover {
+            color: var(--accent-secondary);
+        }
+
+        .hero-right {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .hero-stat {
+            border-radius: 1.25rem;
+            padding: 1.75rem;
+            background: linear-gradient(135deg, 
+                rgba(99, 102, 241, 0.1) 0%, 
+                rgba(15, 23, 42, 0.6) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-stat::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                var(--accent-primary), 
+                var(--accent-secondary), 
+                var(--accent-tertiary));
+        }
+
+        .hero-stat:hover {
+            transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.6);
+            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            margin: 1rem auto 0;
+            border-radius: 2px;
+            box-shadow: 0 0 20px var(--glow-primary);
+        }
+
+        /* Glassmorphic Card Base */
+        .glass-card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px) saturate(180%);
+            border: 1px solid var(--border-subtle);
+            border-radius: 1.25rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(15, 23, 42, 0.6);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            border: 1px solid var(--border-subtle);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.9;
+        }
+
+        .about-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 1.25rem;
+            border: 1px solid var(--border-subtle);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .skill-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .skill-card:hover {
+            background: rgba(15, 23, 42, 0.6);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
+        }
+
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+            font-weight: 700;
+        }
+
+        .skill-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: rgba(148, 163, 184, 0.1);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .skill-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.1) 50%, 
+                transparent 100%);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-success));
+            border-radius: 999px;
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 20px var(--glow-primary);
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            font-size: 0.75rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(99, 102, 241, 0.15);
+            color: #a5b4fc;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tech-tag:hover {
+            background: rgba(99, 102, 241, 0.25);
+            border-color: rgba(99, 102, 241, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 1.25rem;
+            border: 1px solid var(--border-subtle);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(99, 102, 241, 0.1) 0%, 
+                transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-card:hover {
+            border-color: rgba(99, 102, 241, 0.5);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+        }
+
+        .project-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, 
+                rgba(99, 102, 241, 0.15) 0%, 
+                rgba(15, 23, 42, 0.4) 100%);
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-header h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            color: var(--accent-primary);
+            font-weight: 700;
+        }
+
+        .project-type {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+        }
+
+        .project-body {
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-body p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .project-body ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-body li {
+            padding-left: 1.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .project-body li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-primary);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-link {
+            padding: 0.6rem 1.2rem;
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--accent-primary);
+            text-decoration: none;
+            border-radius: 0.75rem;
+            font-size: 0.85rem;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            background: rgba(99, 102, 241, 0.25);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--glow-primary);
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, 
+                var(--accent-primary), 
+                var(--accent-secondary), 
+                var(--accent-tertiary));
+            opacity: 0.3;
+        }
+
+        .experience-item {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 2rem 2rem 2rem 4rem;
+            border-radius: 1.25rem;
+            border: 1px solid var(--border-subtle);
+            margin-bottom: 2rem;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: 22px;
+            top: 2.5rem;
+            width: 18px;
+            height: 18px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 50%;
+            border: 3px solid var(--bg-dark);
+            box-shadow: 0 0 20px var(--glow-primary);
+            z-index: 2;
+        }
+
+        .experience-item:hover {
+            background: rgba(15, 23, 42, 0.6);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateX(10px);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+        }
+
+        .experience-header {
+            margin-bottom: 1.25rem;
+        }
+
+        .experience-header h3 {
+            font-size: 1.4rem;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .experience-company {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .experience-date {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .experience-item li {
+            padding-left: 1.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .experience-item li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent-primary);
+            font-weight: bold;
+        }
+
+        /* Target Roles Section */
+        .card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            border: 1px solid var(--border-subtle);
+            max-width: 1100px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card ul li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Certification Cards */
+        .cert-card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            border: 1px solid var(--border-subtle);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-image-card {
+            background: rgba(15, 23, 42, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-image-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .cert-image-card:hover::before {
+            opacity: 1;
+        }
+
+        .cert-image-card:hover {
+            background: rgba(15, 23, 42, 0.5);
+            border-color: rgba(99, 102, 241, 0.6);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 80px rgba(66, 133, 244, 0.4);
+        }
+
+        .cert-image-card img {
+            transition: transform 0.4s ease;
+        }
+
+        .cert-image-card:hover img {
+            transform: scale(1.02);
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .cert-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cert-card:hover {
+            background: rgba(15, 23, 42, 0.6);
+            border-color: rgba(99, 102, 241, 0.5);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 70px rgba(99, 102, 241, 0.3);
+        }
+
+        .cert-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .cert-badge {
+            padding: 0.4rem 0.9rem;
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .cert-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-verify-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            border-radius: 0.75rem;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .cert-verify-btn:hover {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.3));
+            border-color: var(--accent-primary);
+            transform: translateX(5px);
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .cert-verify-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .cert-verify-btn:hover svg {
+            transform: translateX(3px);
+        }
+
+        .contact-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-method {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 1.25rem;
+            border: 1px solid var(--border-subtle);
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            background: rgba(15, 23, 42, 0.6);
+            border-color: rgba(99, 102, 241, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .contact-method h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+
+        .contact-method a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-method a:hover {
+            color: var(--accent-primary);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                text-align: left;
+                gap: 2rem;
+            }
+
+            .hero-left h1 {
+                font-size: 2.2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #certifications > div > div {
+                grid-template-columns: 1fr !important;
+            }
+
+            .cert-card {
+                padding: 2rem;
+            }
+
+            .section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .experience-timeline::before {
+                left: 15px;
+            }
+
+            .experience-item {
+                padding-left: 3rem;
+            }
+
+            .experience-item::before {
+                left: 7px;
+            }
+
+            .card ul {
+                columns: 1;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-darker);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, var(--accent-secondary), var(--accent-tertiary));
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#target-roles">Target Roles</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="avatar-ring">
+                    <div class="avatar-initials" id="avatarContainer">
+                        <!-- Replace 'avatar.jpg' with your actual photo filename -->
+                        <img src="avatar.jpg" alt="Kamsiriochi David Emmanuel" style="width: 100%; height: 100%; border-radius: 999px; object-fit: cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-weight: 800; font-size: 2rem; letter-spacing: 2px;">KD</div>
+                    </div>
+                </div>
+                <div class="hero-badges">
+                    <span class="badge badge-primary">Junior QA Engineer</span>
+                    <span class="badge badge-outline">Manual & Exploratory Testing</span>
+                    <span class="badge badge-outline">Web · API · UX</span>
+                    <span class="badge" style="background: linear-gradient(135deg, rgba(66, 133, 244, 0.3), rgba(52, 168, 83, 0.3)); border: 1px solid rgba(66, 133, 244, 0.5);">Google Certified</span>
+                </div>
+                <h1>Kamsiriochi David Emmanuel</h1>
+                <p class="subtitle">
+                    Turning messy behaviour, edge cases and user frustration  
+                    into clear bug reports and higher-quality releases.
+                </p>
+
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Location</span>
+                        <span class="meta-value">Coventry, UK</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Focus</span>
+                        <span class="meta-value">Web QA · Security awareness · UX</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Open to</span>
+                        <span class="meta-value">Junior / Trainee Tester roles</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta-row">
+                    <a href="#projects" class="btn btn-primary">View Testing Work</a>
+                    <a href="mailto:kamsidavid4real@gmail.com" class="btn btn-secondary">Contact Me</a>
+                </div>
+
+                <div class="contact-inline">
+                    <span>📧 <a href="mailto:kamsidavid4real@gmail.com">kamsidavid4real@gmail.com</a></span>
+                    <span>📱 +44 7467 830 622</span>
+                    <span>📍 Coventry, UK</span>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-stat">
+                    <span class="stat-number">1+</span>
+                    <span class="stat-label">Year in<br>IT Field</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number">Live</span>
+                    <span class="stat-label">Testing flurzi.com<br>production web app</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Target roles<br>aligned with skills</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>
+                <strong>Junior QA Engineer with obsessive attention to detail and a passion for breaking things constructively.</strong> 
+                I specialize in manual testing, exploratory testing, and security awareness—turning messy edge cases and user 
+                frustration into clear, actionable bug reports that improve product quality.
+            </p>
+            <p>
+                My approach combines systematic test case design with real-world thinking. I'm currently testing live production 
+                applications, building no-code automation workflows, and learning API testing with Postman. My background in 
+                SEND education has sharpened my focus on accessibility and user-centered design.
+            </p>
+            <p>
+                What drives me is the challenge of making software bulletproof—whether that's catching authentication vulnerabilities, 
+                identifying broken workflows, or advocating for users who might be overlooked. I don't just find bugs; I understand 
+                their impact and communicate them clearly to development teams.
+            </p>
+            <p>
+                I studied IT (Level 2 BTech) at Coventry College, where I produced substantial formal coursework, technical reports, and written assignments. My academic work demonstrates strong written communication, attention to detail, and technical understanding—qualities employers can be proud to see in a candidate.
+            </p>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <h2>Professional Certifications</h2>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 3rem;">
+                
+                <!-- Certificate 1: Technical Support -->
+                <div class="cert-image-card">
+                    <img src="Technical%20certification.png" alt="Google Technical Support Fundamentals Certificate" style="width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);">
+                </div>
+
+                <!-- Certificate 2: Networking -->
+                <div class="cert-image-card">
+                    <img src="Bits%20%26%20Bytes%20Certification.png" alt="Google Computer Networking Certificate" style="width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);">
+                </div>
+                
+            </div>
+            
+            <!-- Certification Stats -->
+            <div style="margin-top: 4rem; text-align: center;">
+                <div style="display: inline-grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 800px;">
+                    <div style="padding: 2rem; background: linear-gradient(135deg, rgba(66, 133, 244, 0.15), rgba(52, 168, 83, 0.15)); border-radius: 1.25rem; border: 1px solid rgba(66, 133, 244, 0.3); backdrop-filter: blur(10px);">
+                        <div style="font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #4285F4, #34A853); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem;">2+</div>
+                        <div style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 500;">Google Certificates</div>
+                    </div>
+                    <div style="padding: 2rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(99, 102, 241, 0.15)); border-radius: 1.25rem; border: 1px solid rgba(16, 185, 129, 0.3); backdrop-filter: blur(10px);">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-success); margin-bottom: 0.5rem;">1+</div>
+                        <div style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 500;">Year in IT Field</div>
+                    </div>
+                    <div style="padding: 2rem; background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15)); border-radius: 1.25rem; border: 1px solid rgba(139, 92, 246, 0.3); backdrop-filter: blur(10px);">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-secondary); margin-bottom: 0.5rem;">100%</div>
+                        <div style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 500;">Verified by Google</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>QA Skills & Tooling</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Manual Testing</h3>
+                <p>Test case design · exploratory testing · regression checks · smoke & sanity testing.</p>
+                <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                <div class="project-tech" style="margin-top:0.75rem;">
+                    <span class="tech-tag">Web UI</span>
+                    <span class="tech-tag">Responsive</span>
+                    <span class="tech-tag">Cross-browser</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Defect Reporting</h3>
+                <p>Clear, reproducible bug reports with steps, expected vs actual and impact.</p>
+                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                <div class="project-tech" style="margin-top:0.75rem;">
+                    <span class="tech-tag">Jira-style workflow</span>
+                    <span class="tech-tag">Screenshots</span>
+                    <span class="tech-tag">Traceability</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Test Data & Analytics</h3>
+                <p>Excel / Sheets for test data, pivot tables, filters and simple dashboards.</p>
+                <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+                <div class="project-tech" style="margin-top:0.75rem;">
+                    <span class="tech-tag">Spreadsheets</span>
+                    <span class="tech-tag">Data cleaning</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Security & Risk Awareness</h3>
+                <p>Basic security risk spotting from live app testing and safeguarding training.</p>
+                <div class="skill-bar"><div class="skill-progress" style="width: 78%;"></div></div>
+                <div class="project-tech" style="margin-top:0.75rem;">
+                    <span class="tech-tag">Input validation</span>
+                    <span class="tech-tag">Auth flows</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Accessibility & UX</h3>
+                <p>Accessibility mindset from SEND work; testing flows for clarity and inclusion.</p>
+                <div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div>
+                <div class="project-tech" style="margin-top:0.75rem;">
+                    <span class="tech-tag">WCAG awareness</span>
+                    <span class="tech-tag">User advocacy</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Learning & Automation Path</h3>
+                <p>Currently exploring Postman, basic SQL and UI automation concepts.</p>
+                <div class="skill-bar"><div class="skill-progress" style="width: 65%;"></div></div>
+                <div class="project-tech" style="margin-top:0.75rem;">
+                    <span class="tech-tag">Postman (learning)</span>
+                    <span class="tech-tag">SQL basics</span>
+                    <span class="tech-tag">Cypress / Playwright (roadmap)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>Testing Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Flurzi.com Security Audit</h3>
+                    <span class="project-type">Live Web App Testing</span>
+                </div>
+                <div class="project-body">
+                    <ul>
+                        <li>Conducted exploratory security testing on production web app</li>
+                        <li>Focus areas: auth flows, broken access control, input validation, error handling</li>
+                        <li>Documented findings with reproducible steps and severity ratings</li>
+                        <li>Provided actionable recommendations for immediate fixes</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Web Security</span>
+                        <span class="tech-tag">Auth Testing</span>
+                        <span class="tech-tag">OWASP</span>
+                        <span class="tech-tag">Bug Reports</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://flurzi.com" target="_blank" class="project-link">View Live Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>E-Commerce Test Suite</h3>
+                    <span class="project-type">Functional Testing</span>
+                </div>
+                <div class="project-body">
+                    <ul>
+                        <li>Created comprehensive test cases for checkout flow</li>
+                        <li>Regression testing across Chrome, Firefox, Safari</li>
+                        <li>Mobile responsive testing on iOS and Android</li>
+                        <li>Performance testing for page load times</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Functional Testing</span>
+                        <span class="tech-tag">Cross-browser</span>
+                        <span class="tech-tag">Mobile</span>
+                        <span class="tech-tag">Test Cases</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>No-Code Ops Dashboard</h3>
+                    <span class="project-type">No-Code Development</span>
+                </div>
+                <div class="project-body">
+                    <p style="color: var(--text-dim); margin-bottom: 1rem;">
+                        Built a no-code operations dashboard using Airtable + Softr to replace manual spreadsheet workflows for a small team.
+                    </p>
+                    <ul>
+                        <li>Designed database schema with proper relationships and validation rules</li>
+                        <li>Created user-friendly forms with conditional fields and input validation</li>
+                        <li>Built automated workflows with Zapier for notifications and data syncing</li>
+                        <li>Tested edge cases: invalid inputs, concurrent edits, permission boundaries</li>
+                        <li>Reduced data entry time by 40% and eliminated duplicate records</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Airtable</span>
+                        <span class="tech-tag">Softr</span>
+                        <span class="tech-tag">Zapier</span>
+                        <span class="tech-tag">Workflow Automation</span>
+                        <span class="tech-tag">UX Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>API Testing Practice</h3>
+                    <span class="project-type">API Testing - Learning Project</span>
+                </div>
+                <div class="project-body">
+                    <ul>
+                        <li>Learning Postman for REST API testing</li>
+                        <li>Testing GET, POST, PUT, DELETE endpoints</li>
+                        <li>Validating response codes and data structures</li>
+                        <li>Building test collections for reusability</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Postman</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">JSON</span>
+                        <span class="tech-tag">Status Codes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2>Experience</h2>
+        <div class="experience-timeline">
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>No-Code App & Automation Developer (Self-Directed)</h3>
+                    <div class="experience-company">Flurzi & Personal Projects</div>
+                    <div class="experience-date">2023 - Present</div>
+                </div>
+                <ul>
+                    <li>Designed and built internal tools using no-code platforms (e.g. Airtable, Glide, Softr, Notion, Zapier/Make) to streamline data entry, task tracking and reporting</li>
+                    <li>Mapped real business workflows into step-by-step user journeys, then translated them into automated pipelines with triggers, filters and conditional logic</li>
+                    <li>Created dashboard-style interfaces for non-technical users, focusing on clarity, error-prevention and simple, testable flows</li>
+                    <li>Planned and executed manual test cycles for each automation: negative testing, edge cases, regression checks after changes</li>
+                    <li>Documented each build with diagrams, test cases and "how to use" guides so other team members could adopt the tools safely</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Web Application Tester (Voluntary)</h3>
+                    <div class="experience-company">Flurzi.com</div>
+                    <div class="experience-date">2024 - Present</div>
+                </div>
+                <ul>
+                    <li>Performing exploratory and functional testing on live production environment</li>
+                    <li>Logged and tracked issues in a structured, Jira-style workflow (priority, severity, owner)</li>
+                    <li>Collaborating with development team on bug reproduction and verification</li>
+                    <li>Testing responsive design across devices and screen sizes</li>
+                    <li>Advocating for user experience improvements and accessibility considerations</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Learning Support Assistant</h3>
+                    <div class="experience-company">Various Schools (via Hays)</div>
+                    <div class="experience-date">2022 - 2023</div>
+                </div>
+                <ul>
+                    <li>Supported students with SEND (Special Educational Needs and Disabilities)</li>
+                    <li>Developed accessibility awareness and inclusive communication skills</li>
+                    <li>Adapted materials and approaches based on individual needs</li>
+                    <li>Collaborated with teachers to track progress and outcomes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Roles Section -->
+    <section id="target-roles" class="section">
+        <h2>What I'm Built For – The Tech Roles I'm Ready to Grow Into</h2>
+        <div class="card">
+            <p style="font-size: 1.2rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--text-primary);">
+                I'm not the typical "breaking into tech" candidate. I am <strong>obsessed</strong> with technology —
+                how systems break, how workflows can be automated, how user experience can push people away or keep them hooked,
+                and how tiny defects can damage entire products. I didn't enter IT by accident — I fought for it, I worked 
+                through long nights, I completed industry courses at record speed, and I've tested real production systems with 
+                the mindset of someone who wants to make software <strong>bulletproof</strong>.
+            </p>
+            <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.5rem; color: var(--text-dim);">
+                That hunger has shaped the kind of roles I'm pursuing — roles where curiosity, attention to detail, 
+                and the courage to break things on purpose are not just welcomed, but required. 
+                These are the positions where I know I can grow fast, deliver value from day one,
+                and make a real dent in the product development process.
+            </p>
+            <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.3rem;">Here are the 30 roles that match my skills, mindset and ambition:</h3>
+            <ul style="columns: 2; gap: 2rem; line-height: 1.7; color: var(--text-dim); font-size: 1rem; margin-bottom: 2rem;">
+                <li>Junior QA Engineer</li>
+                <li>Manual Software Tester</li>
+                <li>Web Application Tester</li>
+                <li>UAT Tester</li>
+                <li>Functional Tester</li>
+                <li>Regression Test Analyst</li>
+                <li>QA Support Engineer</li>
+                <li>No-Code Developer</li>
+                <li>No-Code App Builder</li>
+                <li>Automation Specialist (Zapier/Make/Airtable)</li>
+                <li>Workflow Process Analyst</li>
+                <li>Digital Operations Assistant</li>
+                <li>IT Support Technician</li>
+                <li>Technical Support Analyst</li>
+                <li>Application Support Analyst</li>
+                <li>Data Quality Analyst</li>
+                <li>QA Data Entry Specialist</li>
+                <li>CRM Administrator (Junior)</li>
+                <li>Service Desk Analyst</li>
+                <li>Product Operations Assistant</li>
+                <li>Low-Code Platform Support Analyst</li>
+                <li>E-commerce Quality Specialist</li>
+                <li>Website Content QA</li>
+                <li>Accessibility QA Tester</li>
+                <li>Usability Tester (UX)</li>
+                <li>Digital Learning Platform Tester</li>
+                <li>Cross-browser QA Tester</li>
+                <li>Entry-Level Systems Analyst</li>
+                <li>IT Technician (Junior)</li>
+                <li>Automation Workflow Assistant</li>
+            </ul>
+            <p style="font-size: 1.15rem; line-height: 1.9; color: var(--text-primary);">
+                I'm not coming into tech to "try it out" — I'm coming to <strong>grow fast, learn aggressively</strong>, 
+                and become the person who improves products, streamlines systems, and raises quality standards. 
+                Every project I touch becomes sharper. Every bug I find teaches me something new. 
+                Every workflow I automate saves someone time.  
+                This isn't just a career path for me — it's the beginning of a long-term journey in IT excellence.
+            </p>
+            <p style="font-size: 1.2rem; margin-top: 1.5rem; color: var(--accent); font-weight: bold;">
+                If you're looking for someone who brings energy, discipline, rapid learning, 
+                and the mindset of a true problem-solver — I'm already prepared.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Get In Touch</h2>
+        
+        <!-- Professional Summary Callout -->
+        <div style="max-width: 800px; margin: 0 auto 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1)); border-radius: 1.25rem; border: 1px solid rgba(99, 102, 241, 0.3); text-align: center;">
+            <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; margin: 0;">
+                <strong style="color: var(--text-primary);">Ready to contribute from day one.</strong> 
+                I bring hands-on testing experience, no-code automation skills, and an obsessive drive to improve 
+                software quality. If you're looking for a junior QA engineer who learns fast, thinks critically, 
+                and takes ownership—let's talk.
+            </p>
+        </div>
+        
+        <div class="contact-content">
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <h3>📧 Email</h3>
+                    <a href="mailto:kamsidavid4real@gmail.com">kamsidavid4real@gmail.com</a>
+                </div>
+                <div class="contact-method">
+                    <h3>📱 Phone</h3>
+                    <a href="tel:+447467830622">+44 7467 830 622</a>
+                </div>
+                <div class="contact-method">
+                    <h3>📍 Location</h3>
+                    <p style="color: var(--text-secondary); margin: 0;">Coventry, United Kingdom</p>
+                </div>
+                <div class="contact-method">
+                    <h3>💼 Availability</h3>
+                    <p style="color: var(--text-secondary); margin: 0;">Immediately Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Kamsiriochi David Emmanuel. Built with passion for quality.</p>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                     
